@@ -6,3 +6,4 @@ Ported from https://github.com/yanchenko/droidparts/blob/master/droidparts/src/o
 
 Reference goes to https://github.com/yanchenko 
 
+![alt tag](https://github.com/Initlipton/ClearableEditView/blob/master/1st.png)
