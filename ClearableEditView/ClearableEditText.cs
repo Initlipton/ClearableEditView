@@ -25,11 +25,10 @@ namespace ClearableEditView
         void DidClearTextBox();
     }
 
-    public class ClearableEditText : EditText, Android.Views.View.IOnFocusChangeListener
+    public class ClearableEditText : EditText
     {
         private Drawable xD;
         private IListener _listener;
-        private IOnFocusChangeListener f;
 
         protected ClearableEditText(IntPtr javaReference, JniHandleOwnership transfer)
             : base(javaReference, transfer)
@@ -92,15 +91,6 @@ namespace ClearableEditView
             }
             xD.SetBounds(0, 0, xD.IntrinsicWidth, xD.IntrinsicHeight);
             this.SetClearIconVisible(true);
-        }
-
-        public void OnFocusChange(Android.Views.View v, bool hasFocus)
-        {
-            SetClearIconVisible(hasFocus);
-            if (f != null)
-            {
-                f.OnFocusChange(v, hasFocus);
-            }
         }
 
         protected void SetClearIconVisible(bool visible)
