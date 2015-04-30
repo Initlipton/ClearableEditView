@@ -61,6 +61,8 @@ namespace ClearableEditView
 
         public override bool OnTouchEvent(MotionEvent e)
         {
+			base.OnTouchEvent(e);
+			
             if (GetCompoundDrawables()[2] != null)
             {
                 Boolean tappedX = e.GetX() > (Width - PaddingRight - xD.IntrinsicWidth);
